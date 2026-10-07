@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+
+.job-section {
+    scroll-margin-top: 90px;
+}
+
+@media (min-width: 1024px) {
+    .job-section {
+        scroll-margin-top: 140px;
+    }
+}
