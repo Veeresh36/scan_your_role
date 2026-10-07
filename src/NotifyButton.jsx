@@ -1,12 +1,9 @@
 import { useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 
-const response = await fetch("/api/config");
-const config = await response.json();
-
-const SB_URL = config.supabaseUrl;
-const SB_KEY = config.supabaseAnonKey;
-const VAPID = config.vapidPublicKey;
+const SB_URL = import.meta.env.VITE_SUPABASE_URL;
+const SB_KEY = import.meta.env.VITE_SUPABASE_ANON_KEY;
+const VAPID = import.meta.env.VITE_VAPID_PUBLIC_KEY;
 
 const log = (...a) => console.log("[NotifyButton]", ...a);
 
